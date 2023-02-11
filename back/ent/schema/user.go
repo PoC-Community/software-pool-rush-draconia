@@ -18,7 +18,7 @@ type User struct {
 // Fields of the User.
 func (User) Fields() []ent.Field {
 	return []ent.Field{
-		field.UUID("id", uuid.UUID{}).Default(uuid.New()),
+		field.UUID("id", uuid.UUID{}).Default(uuid.New),
 		field.String("username").Unique().NotEmpty(),
 		field.String("password").NotEmpty().MinLen(8).Sensitive().Validate(func(pwd string) error {
 			if strings.ToLower(pwd) == pwd {
@@ -32,6 +32,6 @@ func (User) Fields() []ent.Field {
 // Edges of the User.
 func (User) Edges() []ent.Edge {
 	return []ent.Edge{
-		edge.To("Character", Character.Type),
+		edge.To("characters", Character.Type),
 	}
 }
