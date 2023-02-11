@@ -4,14 +4,15 @@ import (
 	"context"
 	"fmt"
 	"log"
+	"net/http"
 
 	"entgo.io/ent/entc/integration/ent"
 	"github.com/gin-gonic/gin"
 	_ "github.com/lib/pq"
 )
 
-func GetTest(client *ent.Client) ([]*ent.User, err) {
-	client.User.Create().SetLast()
+func GetTest(client *ent.Client) ([]*ent.User, error) {
+	// client.User.Create().SetLast()
 	users, err := client.User.Query().All(context.Background())
 	if err != nil {
 		return nil, fmt.Errorf("nique ta mere")
@@ -32,7 +33,10 @@ func main() {
 	}
 
 	r := gin.Default()
-	r.GET("/ping", GetTest)
-
+	r.GET("/ping", func(c *gin.Context) {
+		c.JSON(http.StatusOK, gin.H{
+			"message": "pong",
+		})
+	})
 	r.Run() // listen and serve on 0.0.0.0:8080 (for windows "localhost:8080")
 }
