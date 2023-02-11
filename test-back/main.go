@@ -38,5 +38,30 @@ func main() {
 			"message": "pong",
 		})
 	})
+
+	r.POST("/login", func(c *gin.Context) {
+		type LoginRequestBody struct {
+			Email    string
+			Password string
+		}
+		var requestBody LoginRequestBody
+
+		if err := c.BindJSON(&requestBody); err != nil {
+			c.String(http.StatusBadRequest, "bad request")
+		} else {
+			users, err := client.User.Query().All();
+			for i := 0; i < fmt.len(users); i++ {
+				if users[i].username == requestBody.Email
+				&& users[i].password == requestBody.Password {
+					c.JSON(http.StatusOK, gin.H{
+						"message": "user is logged in",
+					})
+				}
+			}
+			// utiliser requestBody.Email et Password et checker la bdd
+			c.JSON(http.StatusForbidden, requestBody.Email)
+		}
+	})
+
 	r.Run() // listen and serve on 0.0.0.0:8080 (for windows "localhost:8080")
 }
