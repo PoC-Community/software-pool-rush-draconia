@@ -4,7 +4,7 @@ import Password from './Password';
 import RememberMe from './RememberMe';
 import Connection from './Connection';
 import Title from './Title';
-import Home from '../Home/Home';
+import Signup from './Signup';
 
 export default function LoginUniseed() {
 	const [password, setPassword] = useState('');
@@ -32,6 +32,16 @@ export default function LoginUniseed() {
 					</div>
 					<div className="mt-3">
 						<Connection email={email} password={password} />
+					</div>
+					<div
+						className="mt-3"
+						style={{
+							position: 'absolute',
+							top: 500,
+							left: 100,
+						}}
+					>
+						<Signup />
 					</div>
 				</div>
 			</div>
