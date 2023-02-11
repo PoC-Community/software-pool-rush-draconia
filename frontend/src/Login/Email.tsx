@@ -1,22 +1,21 @@
-import React, { useState } from 'react'
-import { InputGroup, FormControl, Container } from 'react-bootstrap'
+import { InputGroup, FormControl } from 'react-bootstrap';
 
-export default function Email({ email, onChange }: { email:string, onChange:any }) {
-    return (
-        <div>
-            <label style={{ fontWeight: 'bold' }}>Email</label>
-            <InputGroup className="mt-2">
-                <FormControl
-                    type="text"
-                    required
-                    placeholder="prenom.nom@company.com"
-                    autoFocus
-                    value={email}
-                    onChange={e => {
-                        onChange(e.target.value)
-                    }}
-                />
-            </InputGroup>
-        </div>
-    )
+export default function Email({ email, onChange }: { email: string; onChange: any }) {
+	return (
+		<div>
+			<label style={{ fontWeight: 'bold' }}>Email</label>
+			<InputGroup className="mt-2">
+				<FormControl
+					type="text"
+					required
+					placeholder="prenom.nom@company.com"
+					autoFocus
+					value={email}
+					onChange={(e) => {
+						onChange(e.target.value);
+					}}
+				/>
+			</InputGroup>
+		</div>
+	);
 }
