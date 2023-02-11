@@ -16,10 +16,10 @@ export default function SignupUniseed() {
     return (
         <div>
             <div className='split' style={{left:0, backgroundColor:"#8b4513"}}>
-                <img src="rabbit.jpg" style={{height:920, width:600}}/>
+                <img className='rabbit' src="rabbit.jpg"/>
             </div>
             <div className="split" style={{ right: 0, backgroundColor: "#e3b270"}}>
-            <img src="dragon.png" style={{position:"absolute", left:420, width:80 }}/>
+            <img className="dragon" src="dragon.png"/>
                 <div className="centered">
                     <div className="mt-3 text-center">
                         <Title />

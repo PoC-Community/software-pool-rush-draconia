@@ -12,15 +12,11 @@ export default function LoginUniseed() {
 
     return (
         <div>
-            <div
-                className="split"
-                style={{ left: 0, backgroundColor: '#30336b' }}
-            >
+            <div className='split' style={{left:0, backgroundColor:"#8b4513"}}>
+                <img className='rabbit' src="rabbit.jpg"/>
             </div>
-            <div
-                className="split"
-                style={{ right: 0, backgroundColor: '#F3F9FF' }}
-            >
+            <div className="split" style={{ right: 0, backgroundColor: "#e3b270"}}>
+            <img className="dragon_login" src="dragon.png"/>
                 <div className="centered">
                     <div
                         className="text-center">
