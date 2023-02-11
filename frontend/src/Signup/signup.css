@@ -7,6 +7,36 @@
     overflow-x: hidden;
 }
 
+.font {
+    height: 100%;
+    width: 100%;
+    position: fixed;
+}
+
+.font_first {
+    height: 100%;
+    width: 60%;
+    position: sticky;
+    left: 20%;
+    text-align: center;
+}
+
+.title {
+    position:absolute;
+    top:10%;
+    width:100%;
+    height:400px;
+    z-index:2;
+    font-size: 400%;
+    color: #8E736D;
+}
+
+.centere_texte {
+    position: absolute;
+    top: 40%;
+    width: 100%;
+}
+
 .centered {
     position: absolute;
     top: 50%;
@@ -18,6 +48,13 @@
     width:100%;
     height:100%;
     object-fit:cover;
+}
+
+.dragon_font {
+    width : 100vw;
+    height : 100vh;
+    position: absolute;
+    mix-blend-mode: multiply;
 }
 
 .dragon {

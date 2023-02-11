@@ -1,15 +1,15 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
-import SignupUniseed from "./Signup/Signup";
-import LoginUniseed from "./Login/Login";
-import ConnectionUniseed from "./Connection";
+import Signup from "./Signup/Signup";
+import Login from "./Login/Login";
+import Home from "./Home/Home";
 
 function App() {
   return (
       <Routes>
-        <Route path="/signup" element={<SignupUniseed />} />
-        <Route path="/login" element={<LoginUniseed />} />
-        <Route path="/connection" element={<ConnectionUniseed />} />
+        <Route path="/signup" element={<Signup />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="" element={<Home />} />
       </Routes>
   );
 }
