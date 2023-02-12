@@ -151,6 +151,7 @@ export default function CharacterCreator({characterName}: {characterName: string
 							</div>
 						</div>
 					</div>
+				<button className="m-1 p-2 rounded-lg bg-[#d1ad7d] hover:bg-[#be9e75] active:bg-[#a68b6a] shadow-[inset_0_-2px_4px_rgba(0,0,0,0.6)]">Soumettre</button>
 				</div>
 			</Sidebar>
 		</div>
