@@ -25,7 +25,7 @@ function LoginCompte({
 		});
 }
 
-export default function Connection({ email, password }: { email: string; password: string }) {
+export default function Connection({ email, password, setUser }: { email: string; password: string;setUser: React.Dispatch<React.SetStateAction<string>> }) {
 	const navigate = useNavigate();
 	const [toast, setToast] = useState(false);
 	const [errorCode, setErrorCode] = useState(200);
@@ -53,6 +53,7 @@ export default function Connection({ email, password }: { email: string; passwor
 						email: email,
 						password: password,
 						onSucces: () => {
+							setUser(email);
 							navigate('/connection');
 						},
 						onError: (error: any) => {
