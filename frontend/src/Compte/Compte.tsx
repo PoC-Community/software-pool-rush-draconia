@@ -1,6 +1,5 @@
 import SidebarHome from './SidebarCompte';
 import Accordion from 'react-bootstrap/Accordion';
-import Button from 'react-bootstrap/Button';
 
 export default function Compte() {
 
