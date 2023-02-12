@@ -18,17 +18,32 @@
     width: 60%;
     position: sticky;
     left: 20%;
+    border-radius: 10px;
+    border: solid;
     text-align: center;
+    margin-bottom: 3%;
 }
 
 .title {
     position:absolute;
     top:10%;
-    width:100%;
-    height:400px;
-    z-index:2;
+    left: 40%;
+    z-index:1;
     font-size: 400%;
     color: #8E736D;
+}
+
+.title_compte {
+    position:absolute;
+    top:5%;
+    left: 45%;
+    z-index:1;
+    font-size: 400%;
+    color: #8E736D;
+}
+
+.compte {
+    color: #F5DEB3;
 }
 
 .centere_texte {
@@ -54,6 +69,9 @@
     width : 100vw;
     height : 100vh;
     position: absolute;
+    pointer-events: none;
+    left: 0;
+    top: 0;
     mix-blend-mode: multiply;
 }
 
@@ -70,4 +88,15 @@
     left: 45%;
     top:10%;
     padding-top: 20px;
+}
+
+.Persona {
+    top: 30%;
+    left: 15%;
+    width: 70%;
+    position:absolute;
+}
+
+.button {
+    left: 50%;
 }

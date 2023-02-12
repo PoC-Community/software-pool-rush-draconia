@@ -3,7 +3,8 @@
   "extends": ["airbnb-typescript", "react-app", "prettier"],
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
-    "project": "./tsconfig.json"
+    "project": "./tsconfig.json",
+    "import/no-extraneous-dependencies": ["error", {"devDependencies": true}]
     // "tsconfigRootDir": "__dirname"
   },
   "settings": {

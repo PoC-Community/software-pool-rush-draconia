@@ -13,7 +13,7 @@ export default function ConnectionUniseed() {
 				alignItems: 'center',
 			}}
 		>
-			<text>Connexion réussi</text>
+			<p>Connexion réussi</p>
 		</div>
 	);
 }

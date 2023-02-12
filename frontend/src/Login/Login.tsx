@@ -37,8 +37,8 @@ export default function LoginUniseed() {
 						className="mt-3"
 						style={{
 							position: 'absolute',
-							top: 550,
-							left: 0,
+							top: 500,
+							left: 100,
 						}}
 					>
 						<Signup />
