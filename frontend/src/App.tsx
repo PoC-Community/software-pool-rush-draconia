@@ -8,7 +8,8 @@ import CharacterCreator from './CharacterCreator/CharacterCreator';
 
 function App() {
   const [user, setUser] = useState("");
-  const [modifying, setModifying] = useState("");
+  const [modifying, setModifying] = useState("Nom: Test");
+
   return (
       <Routes>
         <Route path="/signup" element={<Signup user={user}/>} />
