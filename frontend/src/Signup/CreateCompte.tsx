@@ -20,7 +20,7 @@ function SignupCompte({
 	onSucces: any;
 	onError: any;
 }) {
-	Axios.post('http://localhost:3000/signup', {
+	Axios.post('http://localhost:8080/register', {
 		email,
 		password,
 		name,

@@ -16,7 +16,7 @@ function LoginCompte({
 	onSucces: any;
 	onError: any;
 }) {
-	Axios.post('http://localhost:3000/login', { email, password })
+	Axios.post('http://localhost:8080/login', { email, password })
 		.then((response) => {
 			onSucces(response);
 		})
@@ -54,7 +54,7 @@ export default function Connection({ email, password, setUser }: { email: string
 						password: password,
 						onSucces: () => {
 							setUser(email);
-							navigate('/connection');
+							navigate('/');
 						},
 						onError: (error: any) => {
 							setErrorCode(error.response.status);
