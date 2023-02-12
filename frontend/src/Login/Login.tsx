@@ -11,9 +11,8 @@ export default function LoginUniseed({user, setUser} : {user: string, setUser: R
 	const [password, setPassword] = useState('');
 	const [email, setEmail] = useState('');
 	const navigate = useNavigate();
-	if (user === "") {
-		navigate('/')
-	}
+	if (user === "")
+		console.log(user);
 	return (
 		<div>
 			<div className="split" style={{ left: 0, backgroundColor: '#8b4513' }}>

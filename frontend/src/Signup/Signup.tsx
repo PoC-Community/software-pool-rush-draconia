@@ -14,9 +14,6 @@ export default function SignupUniseed({user} : {user: string}) {
 	const [email, setEmail] = useState('');
 	const [name, setName] = useState('');
 	const navigate = useNavigate();
-	if (user === "") {
-		navigate('/compte')
-	}
 	return (
 		<div>
 			<div className="split" style={{ left: 0, backgroundColor: '#8b4513' }}>
