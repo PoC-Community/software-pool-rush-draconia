@@ -5,11 +5,14 @@ import RememberMe from './RememberMe';
 import Connection from './Connection';
 import Title from './Title';
 import Signup from './Signup';
+import { useNavigate } from 'react-router';
 
-export default function LoginUniseed() {
+export default function LoginUniseed({user, setUser} : {user: string, setUser: React.Dispatch<React.SetStateAction<string>>}) {
 	const [password, setPassword] = useState('');
 	const [email, setEmail] = useState('');
-
+	const navigate = useNavigate();
+	if (user === "")
+		console.log(user);
 	return (
 		<div>
 			<div className="split" style={{ left: 0, backgroundColor: '#8b4513' }}>
@@ -31,7 +34,7 @@ export default function LoginUniseed() {
 						<RememberMe />
 					</div>
 					<div className="mt-3">
-						<Connection email={email} password={password} />
+						<Connection email={email} password={password} setUser={setUser}/>
 					</div>
 					<div
 						className="mt-3"

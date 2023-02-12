@@ -6,13 +6,14 @@ import Title from './Title';
 import ConfirmationPassword from './ConfirmationPassword';
 import Name from './Name';
 import './signup.css';
+import { Navigate, useNavigate } from 'react-router';
 
-export default function SignupUniseed() {
+export default function SignupUniseed({user} : {user: string}) {
 	const [password, setPassword] = useState('');
 	const [confirmationPassword, setConfirmationPassword] = useState('');
 	const [email, setEmail] = useState('');
 	const [name, setName] = useState('');
-
+	const navigate = useNavigate();
 	return (
 		<div>
 			<div className="split" style={{ left: 0, backgroundColor: '#8b4513' }}>
