@@ -62,7 +62,8 @@
 .rabbit {
     width:100%;
     height:100%;
-    object-fit:inherit;
+    object-fit: cover;
+    object-position: -600px 0px;
 }
 
 .dragon_font {
