@@ -45,14 +45,15 @@ func main() {
 			Password string
 		}
 		var requestBody LoginRequestBody
-
 		if err := c.BindJSON(&requestBody); err != nil {
 			c.String(http.StatusBadRequest, "bad request")
 		} else {
-			users, err := client.User.Query().All();
-			for i := 0; i < fmt.len(users); i++ {
-				if users[i].username == requestBody.Email
-				&& users[i].password == requestBody.Password {
+			users, err := client.User.Query().All(context.Background())
+			if err != nil {
+				log.Fatal("connard")
+			}
+			for i := 0; i < len(users); i++ {
+				if users[i].Username == requestBody.Email && users[i].Password == requestBody.Password {
 					c.JSON(http.StatusOK, gin.H{
 						"message": "user is logged in",
 					})

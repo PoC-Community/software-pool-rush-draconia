@@ -5,6 +5,7 @@ package ent
 import (
 	"context"
 	"draconia/ent/character"
+	"draconia/ent/user"
 	"errors"
 	"fmt"
 	"reflect"
@@ -40,6 +41,7 @@ type OrderFunc func(*sql.Selector)
 func columnChecker(table string) func(string) error {
 	checks := map[string]func(string) bool{
 		character.Table: character.ValidColumn,
+		user.Table:      user.ValidColumn,
 	}
 	check, ok := checks[table]
 	if !ok {

@@ -28,9 +28,11 @@ type config struct {
 type (
 	hooks struct {
 		Character []ent.Hook
+		User      []ent.Hook
 	}
 	inters struct {
 		Character []ent.Interceptor
+		User      []ent.Interceptor
 	}
 )
 

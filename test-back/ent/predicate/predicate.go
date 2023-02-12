@@ -8,3 +8,6 @@ import (
 
 // Character is the predicate function for character builders.
 type Character func(*sql.Selector)
+
+// User is the predicate function for user builders.
+type User func(*sql.Selector)

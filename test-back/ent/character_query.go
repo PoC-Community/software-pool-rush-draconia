@@ -12,6 +12,7 @@ import (
 	"entgo.io/ent/dialect/sql"
 	"entgo.io/ent/dialect/sql/sqlgraph"
 	"entgo.io/ent/schema/field"
+	"github.com/google/uuid"
 )
 
 // CharacterQuery is the builder for querying Character entities.
@@ -81,8 +82,8 @@ func (cq *CharacterQuery) FirstX(ctx context.Context) *Character {
 
 // FirstID returns the first Character ID from the query.
 // Returns a *NotFoundError when no Character ID was found.
-func (cq *CharacterQuery) FirstID(ctx context.Context) (id int, err error) {
-	var ids []int
+func (cq *CharacterQuery) FirstID(ctx context.Context) (id uuid.UUID, err error) {
+	var ids []uuid.UUID
 	if ids, err = cq.Limit(1).IDs(setContextOp(ctx, cq.ctx, "FirstID")); err != nil {
 		return
 	}
@@ -94,7 +95,7 @@ func (cq *CharacterQuery) FirstID(ctx context.Context) (id int, err error) {
 }
 
 // FirstIDX is like FirstID, but panics if an error occurs.
-func (cq *CharacterQuery) FirstIDX(ctx context.Context) int {
+func (cq *CharacterQuery) FirstIDX(ctx context.Context) uuid.UUID {
 	id, err := cq.FirstID(ctx)
 	if err != nil && !IsNotFound(err) {
 		panic(err)
@@ -132,8 +133,8 @@ func (cq *CharacterQuery) OnlyX(ctx context.Context) *Character {
 // OnlyID is like Only, but returns the only Character ID in the query.
 // Returns a *NotSingularError when more than one Character ID is found.
 // Returns a *NotFoundError when no entities are found.
-func (cq *CharacterQuery) OnlyID(ctx context.Context) (id int, err error) {
-	var ids []int
+func (cq *CharacterQuery) OnlyID(ctx context.Context) (id uuid.UUID, err error) {
+	var ids []uuid.UUID
 	if ids, err = cq.Limit(2).IDs(setContextOp(ctx, cq.ctx, "OnlyID")); err != nil {
 		return
 	}
@@ -149,7 +150,7 @@ func (cq *CharacterQuery) OnlyID(ctx context.Context) (id int, err error) {
 }
 
 // OnlyIDX is like OnlyID, but panics if an error occurs.
-func (cq *CharacterQuery) OnlyIDX(ctx context.Context) int {
+func (cq *CharacterQuery) OnlyIDX(ctx context.Context) uuid.UUID {
 	id, err := cq.OnlyID(ctx)
 	if err != nil {
 		panic(err)
@@ -177,8 +178,8 @@ func (cq *CharacterQuery) AllX(ctx context.Context) []*Character {
 }
 
 // IDs executes the query and returns a list of Character IDs.
-func (cq *CharacterQuery) IDs(ctx context.Context) ([]int, error) {
-	var ids []int
+func (cq *CharacterQuery) IDs(ctx context.Context) ([]uuid.UUID, error) {
+	var ids []uuid.UUID
 	ctx = setContextOp(ctx, cq.ctx, "IDs")
 	if err := cq.Select(character.FieldID).Scan(ctx, &ids); err != nil {
 		return nil, err
@@ -187,7 +188,7 @@ func (cq *CharacterQuery) IDs(ctx context.Context) ([]int, error) {
 }
 
 // IDsX is like IDs, but panics if an error occurs.
-func (cq *CharacterQuery) IDsX(ctx context.Context) []int {
+func (cq *CharacterQuery) IDsX(ctx context.Context) []uuid.UUID {
 	ids, err := cq.IDs(ctx)
 	if err != nil {
 		panic(err)
@@ -259,12 +260,12 @@ func (cq *CharacterQuery) Clone() *CharacterQuery {
 // Example:
 //
 //	var v []struct {
-//		Price int64 `json:"price,omitempty"`
+//		Name string `json:"name,omitempty"`
 //		Count int `json:"count,omitempty"`
 //	}
 //
 //	client.Character.Query().
-//		GroupBy(character.FieldPrice).
+//		GroupBy(character.FieldName).
 //		Aggregate(ent.Count()).
 //		Scan(ctx, &v)
 func (cq *CharacterQuery) GroupBy(field string, fields ...string) *CharacterGroupBy {
@@ -282,11 +283,11 @@ func (cq *CharacterQuery) GroupBy(field string, fields ...string) *CharacterGrou
 // Example:
 //
 //	var v []struct {
-//		Price int64 `json:"price,omitempty"`
+//		Name string `json:"name,omitempty"`
 //	}
 //
 //	client.Character.Query().
-//		Select(character.FieldPrice).
+//		Select(character.FieldName).
 //		Scan(ctx, &v)
 func (cq *CharacterQuery) Select(fields ...string) *CharacterSelect {
 	cq.ctx.Fields = append(cq.ctx.Fields, fields...)
@@ -367,7 +368,7 @@ func (cq *CharacterQuery) querySpec() *sqlgraph.QuerySpec {
 			Table:   character.Table,
 			Columns: character.Columns,
 			ID: &sqlgraph.FieldSpec{
-				Type:   field.TypeInt,
+				Type:   field.TypeUUID,
 				Column: character.FieldID,
 			},
 		},

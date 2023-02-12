@@ -2,8 +2,222 @@
 
 package ent
 
+import (
+	"draconia/ent/character"
+	"draconia/ent/schema"
+	"draconia/ent/user"
+
+	"github.com/google/uuid"
+)
+
 // The init function reads all schema descriptors with runtime code
 // (default values, validators, hooks and policies) and stitches it
 // to their package variables.
 func init() {
+	characterFields := schema.Character{}.Fields()
+	_ = characterFields
+	// characterDescName is the schema descriptor for name field.
+	characterDescName := characterFields[1].Descriptor()
+	// character.NameValidator is a validator for the "name" field. It is called by the builders before save.
+	character.NameValidator = characterDescName.Validators[0].(func(string) error)
+	// characterDescCombat is the schema descriptor for combat field.
+	characterDescCombat := characterFields[2].Descriptor()
+	// character.CombatValidator is a validator for the "combat" field. It is called by the builders before save.
+	character.CombatValidator = characterDescCombat.Validators[0].(func(int) error)
+	// characterDescConnaissance is the schema descriptor for connaissance field.
+	characterDescConnaissance := characterFields[3].Descriptor()
+	// character.ConnaissanceValidator is a validator for the "connaissance" field. It is called by the builders before save.
+	character.ConnaissanceValidator = characterDescConnaissance.Validators[0].(func(int) error)
+	// characterDescDiscretion is the schema descriptor for discretion field.
+	characterDescDiscretion := characterFields[4].Descriptor()
+	// character.DiscretionValidator is a validator for the "discretion" field. It is called by the builders before save.
+	character.DiscretionValidator = characterDescDiscretion.Validators[0].(func(int) error)
+	// characterDescEndurance is the schema descriptor for endurance field.
+	characterDescEndurance := characterFields[5].Descriptor()
+	// character.EnduranceValidator is a validator for the "endurance" field. It is called by the builders before save.
+	character.EnduranceValidator = characterDescEndurance.Validators[0].(func(int) error)
+	// characterDescForce is the schema descriptor for force field.
+	characterDescForce := characterFields[6].Descriptor()
+	// character.ForceValidator is a validator for the "force" field. It is called by the builders before save.
+	character.ForceValidator = characterDescForce.Validators[0].(func(int) error)
+	// characterDescHabilite is the schema descriptor for habilite field.
+	characterDescHabilite := characterFields[7].Descriptor()
+	// character.HabiliteValidator is a validator for the "habilite" field. It is called by the builders before save.
+	character.HabiliteValidator = characterDescHabilite.Validators[0].(func(int) error)
+	// characterDescMouvement is the schema descriptor for mouvement field.
+	characterDescMouvement := characterFields[8].Descriptor()
+	// character.MouvementValidator is a validator for the "mouvement" field. It is called by the builders before save.
+	character.MouvementValidator = characterDescMouvement.Validators[0].(func(int) error)
+	// characterDescPerception is the schema descriptor for perception field.
+	characterDescPerception := characterFields[9].Descriptor()
+	// character.PerceptionValidator is a validator for the "perception" field. It is called by the builders before save.
+	character.PerceptionValidator = characterDescPerception.Validators[0].(func(int) error)
+	// characterDescSociabilite is the schema descriptor for sociabilite field.
+	characterDescSociabilite := characterFields[10].Descriptor()
+	// character.SociabiliteValidator is a validator for the "sociabilite" field. It is called by the builders before save.
+	character.SociabiliteValidator = characterDescSociabilite.Validators[0].(func(int) error)
+	// characterDescSurvie is the schema descriptor for survie field.
+	characterDescSurvie := characterFields[11].Descriptor()
+	// character.SurvieValidator is a validator for the "survie" field. It is called by the builders before save.
+	character.SurvieValidator = characterDescSurvie.Validators[0].(func(int) error)
+	// characterDescTir is the schema descriptor for tir field.
+	characterDescTir := characterFields[12].Descriptor()
+	// character.TirValidator is a validator for the "tir" field. It is called by the builders before save.
+	character.TirValidator = characterDescTir.Validators[0].(func(int) error)
+	// characterDescVolonte is the schema descriptor for volonte field.
+	characterDescVolonte := characterFields[13].Descriptor()
+	// character.VolonteValidator is a validator for the "volonte" field. It is called by the builders before save.
+	character.VolonteValidator = characterDescVolonte.Validators[0].(func(int) error)
+	// characterDescExp is the schema descriptor for exp field.
+	characterDescExp := characterFields[14].Descriptor()
+	// character.ExpValidator is a validator for the "exp" field. It is called by the builders before save.
+	character.ExpValidator = characterDescExp.Validators[0].(func(int) error)
+	// characterDescArmesHast is the schema descriptor for armes_hast field.
+	characterDescArmesHast := characterFields[15].Descriptor()
+	// character.ArmesHastValidator is a validator for the "armes_hast" field. It is called by the builders before save.
+	character.ArmesHastValidator = characterDescArmesHast.Validators[0].(func(int) error)
+	// characterDescArmesMoine is the schema descriptor for armes_moine field.
+	characterDescArmesMoine := characterFields[16].Descriptor()
+	// character.ArmesMoineValidator is a validator for the "armes_moine" field. It is called by the builders before save.
+	character.ArmesMoineValidator = characterDescArmesMoine.Validators[0].(func(int) error)
+	// characterDescArmesDoubles is the schema descriptor for armes_doubles field.
+	characterDescArmesDoubles := characterFields[17].Descriptor()
+	// character.ArmesDoublesValidator is a validator for the "armes_doubles" field. It is called by the builders before save.
+	character.ArmesDoublesValidator = characterDescArmesDoubles.Validators[0].(func(int) error)
+	// characterDescArmesNaturelles is the schema descriptor for armes_naturelles field.
+	characterDescArmesNaturelles := characterFields[18].Descriptor()
+	// character.ArmesNaturellesValidator is a validator for the "armes_naturelles" field. It is called by the builders before save.
+	character.ArmesNaturellesValidator = characterDescArmesNaturelles.Validators[0].(func(int) error)
+	// characterDescBatons is the schema descriptor for batons field.
+	characterDescBatons := characterFields[19].Descriptor()
+	// character.BatonsValidator is a validator for the "batons" field. It is called by the builders before save.
+	character.BatonsValidator = characterDescBatons.Validators[0].(func(int) error)
+	// characterDescCimeterres is the schema descriptor for cimeterres field.
+	characterDescCimeterres := characterFields[20].Descriptor()
+	// character.CimeterresValidator is a validator for the "cimeterres" field. It is called by the builders before save.
+	character.CimeterresValidator = characterDescCimeterres.Validators[0].(func(int) error)
+	// characterDescFleaux is the schema descriptor for fleaux field.
+	characterDescFleaux := characterFields[21].Descriptor()
+	// character.FleauxValidator is a validator for the "fleaux" field. It is called by the builders before save.
+	character.FleauxValidator = characterDescFleaux.Validators[0].(func(int) error)
+	// characterDescFouets is the schema descriptor for fouets field.
+	characterDescFouets := characterFields[22].Descriptor()
+	// character.FouetsValidator is a validator for the "fouets" field. It is called by the builders before save.
+	character.FouetsValidator = characterDescFouets.Validators[0].(func(int) error)
+	// characterDescHaches is the schema descriptor for haches field.
+	characterDescHaches := characterFields[23].Descriptor()
+	// character.HachesValidator is a validator for the "haches" field. It is called by the builders before save.
+	character.HachesValidator = characterDescHaches.Validators[0].(func(int) error)
+	// characterDescKatanas is the schema descriptor for katanas field.
+	characterDescKatanas := characterFields[24].Descriptor()
+	// character.KatanasValidator is a validator for the "katanas" field. It is called by the builders before save.
+	character.KatanasValidator = characterDescKatanas.Validators[0].(func(int) error)
+	// characterDescLamesLegeres is the schema descriptor for lames_legeres field.
+	characterDescLamesLegeres := characterFields[25].Descriptor()
+	// character.LamesLegeresValidator is a validator for the "lames_legeres" field. It is called by the builders before save.
+	character.LamesLegeresValidator = characterDescLamesLegeres.Validators[0].(func(int) error)
+	// characterDescLamesLourdes is the schema descriptor for lames_lourdes field.
+	characterDescLamesLourdes := characterFields[26].Descriptor()
+	// character.LamesLourdesValidator is a validator for the "lames_lourdes" field. It is called by the builders before save.
+	character.LamesLourdesValidator = characterDescLamesLourdes.Validators[0].(func(int) error)
+	// characterDescLances is the schema descriptor for lances field.
+	characterDescLances := characterFields[27].Descriptor()
+	// character.LancesValidator is a validator for the "lances" field. It is called by the builders before save.
+	character.LancesValidator = characterDescLances.Validators[0].(func(int) error)
+	// characterDescMarteaux is the schema descriptor for marteaux field.
+	characterDescMarteaux := characterFields[28].Descriptor()
+	// character.MarteauxValidator is a validator for the "marteaux" field. It is called by the builders before save.
+	character.MarteauxValidator = characterDescMarteaux.Validators[0].(func(int) error)
+	// characterDescMainsNues is the schema descriptor for mains_nues field.
+	characterDescMainsNues := characterFields[29].Descriptor()
+	// character.MainsNuesValidator is a validator for the "mains_nues" field. It is called by the builders before save.
+	character.MainsNuesValidator = characterDescMainsNues.Validators[0].(func(int) error)
+	// characterDescMysteres is the schema descriptor for mysteres field.
+	characterDescMysteres := characterFields[30].Descriptor()
+	// character.MysteresValidator is a validator for the "mysteres" field. It is called by the builders before save.
+	character.MysteresValidator = characterDescMysteres.Validators[0].(func(int) error)
+	// characterDescExplorationSouterraine is the schema descriptor for exploration_souterraine field.
+	characterDescExplorationSouterraine := characterFields[31].Descriptor()
+	// character.ExplorationSouterraineValidator is a validator for the "exploration_souterraine" field. It is called by the builders before save.
+	character.ExplorationSouterraineValidator = characterDescExplorationSouterraine.Validators[0].(func(int) error)
+	// characterDescIngenierie is the schema descriptor for ingenierie field.
+	characterDescIngenierie := characterFields[32].Descriptor()
+	// character.IngenierieValidator is a validator for the "ingenierie" field. It is called by the builders before save.
+	character.IngenierieValidator = characterDescIngenierie.Validators[0].(func(int) error)
+	// characterDescGeographie is the schema descriptor for geographie field.
+	characterDescGeographie := characterFields[33].Descriptor()
+	// character.GeographieValidator is a validator for the "geographie" field. It is called by the builders before save.
+	character.GeographieValidator = characterDescGeographie.Validators[0].(func(int) error)
+	// characterDescHistoire is the schema descriptor for histoire field.
+	characterDescHistoire := characterFields[34].Descriptor()
+	// character.HistoireValidator is a validator for the "histoire" field. It is called by the builders before save.
+	character.HistoireValidator = characterDescHistoire.Validators[0].(func(int) error)
+	// characterDescFolklore is the schema descriptor for folklore field.
+	characterDescFolklore := characterFields[35].Descriptor()
+	// character.FolkloreValidator is a validator for the "folklore" field. It is called by the builders before save.
+	character.FolkloreValidator = characterDescFolklore.Validators[0].(func(int) error)
+	// characterDescNature is the schema descriptor for nature field.
+	characterDescNature := characterFields[36].Descriptor()
+	// character.NatureValidator is a validator for the "nature" field. It is called by the builders before save.
+	character.NatureValidator = characterDescNature.Validators[0].(func(int) error)
+	// characterDescNoblesse is the schema descriptor for noblesse field.
+	characterDescNoblesse := characterFields[37].Descriptor()
+	// character.NoblesseValidator is a validator for the "noblesse" field. It is called by the builders before save.
+	character.NoblesseValidator = characterDescNoblesse.Validators[0].(func(int) error)
+	// characterDescPlans is the schema descriptor for plans field.
+	characterDescPlans := characterFields[38].Descriptor()
+	// character.PlansValidator is a validator for the "plans" field. It is called by the builders before save.
+	character.PlansValidator = characterDescPlans.Validators[0].(func(int) error)
+	// characterDescReligon is the schema descriptor for religon field.
+	characterDescReligon := characterFields[39].Descriptor()
+	// character.ReligonValidator is a validator for the "religon" field. It is called by the builders before save.
+	character.ReligonValidator = characterDescReligon.Validators[0].(func(int) error)
+	// characterDescAnatomie is the schema descriptor for anatomie field.
+	characterDescAnatomie := characterFields[40].Descriptor()
+	// character.AnatomieValidator is a validator for the "anatomie" field. It is called by the builders before save.
+	character.AnatomieValidator = characterDescAnatomie.Validators[0].(func(int) error)
+	// characterDescMagieTheorique is the schema descriptor for magie_theorique field.
+	characterDescMagieTheorique := characterFields[41].Descriptor()
+	// character.MagieTheoriqueValidator is a validator for the "magie_theorique" field. It is called by the builders before save.
+	character.MagieTheoriqueValidator = characterDescMagieTheorique.Validators[0].(func(int) error)
+	// characterDescEconomie is the schema descriptor for economie field.
+	characterDescEconomie := characterFields[42].Descriptor()
+	// character.EconomieValidator is a validator for the "economie" field. It is called by the builders before save.
+	character.EconomieValidator = characterDescEconomie.Validators[0].(func(int) error)
+	// characterDescLinguistique is the schema descriptor for linguistique field.
+	characterDescLinguistique := characterFields[43].Descriptor()
+	// character.LinguistiqueValidator is a validator for the "linguistique" field. It is called by the builders before save.
+	character.LinguistiqueValidator = characterDescLinguistique.Validators[0].(func(int) error)
+	// characterDescID is the schema descriptor for id field.
+	characterDescID := characterFields[0].Descriptor()
+	// character.DefaultID holds the default value on creation for the id field.
+	character.DefaultID = characterDescID.Default.(func() uuid.UUID)
+	userFields := schema.User{}.Fields()
+	_ = userFields
+	// userDescUsername is the schema descriptor for username field.
+	userDescUsername := userFields[1].Descriptor()
+	// user.UsernameValidator is a validator for the "username" field. It is called by the builders before save.
+	user.UsernameValidator = userDescUsername.Validators[0].(func(string) error)
+	// userDescPassword is the schema descriptor for password field.
+	userDescPassword := userFields[2].Descriptor()
+	// user.PasswordValidator is a validator for the "password" field. It is called by the builders before save.
+	user.PasswordValidator = func() func(string) error {
+		validators := userDescPassword.Validators
+		fns := [...]func(string) error{
+			validators[0].(func(string) error),
+			validators[1].(func(string) error),
+		}
+		return func(password string) error {
+			for _, fn := range fns {
+				if err := fn(password); err != nil {
+					return err
+				}
+			}
+			return nil
+		}
+	}()
+	// userDescID is the schema descriptor for id field.
+	userDescID := userFields[0].Descriptor()
+	// user.DefaultID holds the default value on creation for the id field.
+	user.DefaultID = userDescID.Default.(func() uuid.UUID)
 }

@@ -10,6 +10,7 @@ import (
 
 	"entgo.io/ent/dialect/sql/sqlgraph"
 	"entgo.io/ent/schema/field"
+	"github.com/google/uuid"
 )
 
 // CharacterCreate is the builder for creating a Character entity.
@@ -19,9 +20,275 @@ type CharacterCreate struct {
 	hooks    []Hook
 }
 
-// SetPrice sets the "price" field.
-func (cc *CharacterCreate) SetPrice(i int64) *CharacterCreate {
-	cc.mutation.SetPrice(i)
+// SetName sets the "name" field.
+func (cc *CharacterCreate) SetName(s string) *CharacterCreate {
+	cc.mutation.SetName(s)
+	return cc
+}
+
+// SetCombat sets the "combat" field.
+func (cc *CharacterCreate) SetCombat(i int) *CharacterCreate {
+	cc.mutation.SetCombat(i)
+	return cc
+}
+
+// SetConnaissance sets the "connaissance" field.
+func (cc *CharacterCreate) SetConnaissance(i int) *CharacterCreate {
+	cc.mutation.SetConnaissance(i)
+	return cc
+}
+
+// SetDiscretion sets the "discretion" field.
+func (cc *CharacterCreate) SetDiscretion(i int) *CharacterCreate {
+	cc.mutation.SetDiscretion(i)
+	return cc
+}
+
+// SetEndurance sets the "endurance" field.
+func (cc *CharacterCreate) SetEndurance(i int) *CharacterCreate {
+	cc.mutation.SetEndurance(i)
+	return cc
+}
+
+// SetForce sets the "force" field.
+func (cc *CharacterCreate) SetForce(i int) *CharacterCreate {
+	cc.mutation.SetForce(i)
+	return cc
+}
+
+// SetHabilite sets the "habilite" field.
+func (cc *CharacterCreate) SetHabilite(i int) *CharacterCreate {
+	cc.mutation.SetHabilite(i)
+	return cc
+}
+
+// SetMouvement sets the "mouvement" field.
+func (cc *CharacterCreate) SetMouvement(i int) *CharacterCreate {
+	cc.mutation.SetMouvement(i)
+	return cc
+}
+
+// SetPerception sets the "perception" field.
+func (cc *CharacterCreate) SetPerception(i int) *CharacterCreate {
+	cc.mutation.SetPerception(i)
+	return cc
+}
+
+// SetSociabilite sets the "sociabilite" field.
+func (cc *CharacterCreate) SetSociabilite(i int) *CharacterCreate {
+	cc.mutation.SetSociabilite(i)
+	return cc
+}
+
+// SetSurvie sets the "survie" field.
+func (cc *CharacterCreate) SetSurvie(i int) *CharacterCreate {
+	cc.mutation.SetSurvie(i)
+	return cc
+}
+
+// SetTir sets the "tir" field.
+func (cc *CharacterCreate) SetTir(i int) *CharacterCreate {
+	cc.mutation.SetTir(i)
+	return cc
+}
+
+// SetVolonte sets the "volonte" field.
+func (cc *CharacterCreate) SetVolonte(i int) *CharacterCreate {
+	cc.mutation.SetVolonte(i)
+	return cc
+}
+
+// SetExp sets the "exp" field.
+func (cc *CharacterCreate) SetExp(i int) *CharacterCreate {
+	cc.mutation.SetExp(i)
+	return cc
+}
+
+// SetArmesHast sets the "armes_hast" field.
+func (cc *CharacterCreate) SetArmesHast(i int) *CharacterCreate {
+	cc.mutation.SetArmesHast(i)
+	return cc
+}
+
+// SetArmesMoine sets the "armes_moine" field.
+func (cc *CharacterCreate) SetArmesMoine(i int) *CharacterCreate {
+	cc.mutation.SetArmesMoine(i)
+	return cc
+}
+
+// SetArmesDoubles sets the "armes_doubles" field.
+func (cc *CharacterCreate) SetArmesDoubles(i int) *CharacterCreate {
+	cc.mutation.SetArmesDoubles(i)
+	return cc
+}
+
+// SetArmesNaturelles sets the "armes_naturelles" field.
+func (cc *CharacterCreate) SetArmesNaturelles(i int) *CharacterCreate {
+	cc.mutation.SetArmesNaturelles(i)
+	return cc
+}
+
+// SetBatons sets the "batons" field.
+func (cc *CharacterCreate) SetBatons(i int) *CharacterCreate {
+	cc.mutation.SetBatons(i)
+	return cc
+}
+
+// SetCimeterres sets the "cimeterres" field.
+func (cc *CharacterCreate) SetCimeterres(i int) *CharacterCreate {
+	cc.mutation.SetCimeterres(i)
+	return cc
+}
+
+// SetFleaux sets the "fleaux" field.
+func (cc *CharacterCreate) SetFleaux(i int) *CharacterCreate {
+	cc.mutation.SetFleaux(i)
+	return cc
+}
+
+// SetFouets sets the "fouets" field.
+func (cc *CharacterCreate) SetFouets(i int) *CharacterCreate {
+	cc.mutation.SetFouets(i)
+	return cc
+}
+
+// SetHaches sets the "haches" field.
+func (cc *CharacterCreate) SetHaches(i int) *CharacterCreate {
+	cc.mutation.SetHaches(i)
+	return cc
+}
+
+// SetKatanas sets the "katanas" field.
+func (cc *CharacterCreate) SetKatanas(i int) *CharacterCreate {
+	cc.mutation.SetKatanas(i)
+	return cc
+}
+
+// SetLamesLegeres sets the "lames_legeres" field.
+func (cc *CharacterCreate) SetLamesLegeres(i int) *CharacterCreate {
+	cc.mutation.SetLamesLegeres(i)
+	return cc
+}
+
+// SetLamesLourdes sets the "lames_lourdes" field.
+func (cc *CharacterCreate) SetLamesLourdes(i int) *CharacterCreate {
+	cc.mutation.SetLamesLourdes(i)
+	return cc
+}
+
+// SetLances sets the "lances" field.
+func (cc *CharacterCreate) SetLances(i int) *CharacterCreate {
+	cc.mutation.SetLances(i)
+	return cc
+}
+
+// SetMarteaux sets the "marteaux" field.
+func (cc *CharacterCreate) SetMarteaux(i int) *CharacterCreate {
+	cc.mutation.SetMarteaux(i)
+	return cc
+}
+
+// SetMainsNues sets the "mains_nues" field.
+func (cc *CharacterCreate) SetMainsNues(i int) *CharacterCreate {
+	cc.mutation.SetMainsNues(i)
+	return cc
+}
+
+// SetMysteres sets the "mysteres" field.
+func (cc *CharacterCreate) SetMysteres(i int) *CharacterCreate {
+	cc.mutation.SetMysteres(i)
+	return cc
+}
+
+// SetExplorationSouterraine sets the "exploration_souterraine" field.
+func (cc *CharacterCreate) SetExplorationSouterraine(i int) *CharacterCreate {
+	cc.mutation.SetExplorationSouterraine(i)
+	return cc
+}
+
+// SetIngenierie sets the "ingenierie" field.
+func (cc *CharacterCreate) SetIngenierie(i int) *CharacterCreate {
+	cc.mutation.SetIngenierie(i)
+	return cc
+}
+
+// SetGeographie sets the "geographie" field.
+func (cc *CharacterCreate) SetGeographie(i int) *CharacterCreate {
+	cc.mutation.SetGeographie(i)
+	return cc
+}
+
+// SetHistoire sets the "histoire" field.
+func (cc *CharacterCreate) SetHistoire(i int) *CharacterCreate {
+	cc.mutation.SetHistoire(i)
+	return cc
+}
+
+// SetFolklore sets the "folklore" field.
+func (cc *CharacterCreate) SetFolklore(i int) *CharacterCreate {
+	cc.mutation.SetFolklore(i)
+	return cc
+}
+
+// SetNature sets the "nature" field.
+func (cc *CharacterCreate) SetNature(i int) *CharacterCreate {
+	cc.mutation.SetNature(i)
+	return cc
+}
+
+// SetNoblesse sets the "noblesse" field.
+func (cc *CharacterCreate) SetNoblesse(i int) *CharacterCreate {
+	cc.mutation.SetNoblesse(i)
+	return cc
+}
+
+// SetPlans sets the "plans" field.
+func (cc *CharacterCreate) SetPlans(i int) *CharacterCreate {
+	cc.mutation.SetPlans(i)
+	return cc
+}
+
+// SetReligon sets the "religon" field.
+func (cc *CharacterCreate) SetReligon(i int) *CharacterCreate {
+	cc.mutation.SetReligon(i)
+	return cc
+}
+
+// SetAnatomie sets the "anatomie" field.
+func (cc *CharacterCreate) SetAnatomie(i int) *CharacterCreate {
+	cc.mutation.SetAnatomie(i)
+	return cc
+}
+
+// SetMagieTheorique sets the "magie_theorique" field.
+func (cc *CharacterCreate) SetMagieTheorique(i int) *CharacterCreate {
+	cc.mutation.SetMagieTheorique(i)
+	return cc
+}
+
+// SetEconomie sets the "economie" field.
+func (cc *CharacterCreate) SetEconomie(i int) *CharacterCreate {
+	cc.mutation.SetEconomie(i)
+	return cc
+}
+
+// SetLinguistique sets the "linguistique" field.
+func (cc *CharacterCreate) SetLinguistique(i int) *CharacterCreate {
+	cc.mutation.SetLinguistique(i)
+	return cc
+}
+
+// SetID sets the "id" field.
+func (cc *CharacterCreate) SetID(u uuid.UUID) *CharacterCreate {
+	cc.mutation.SetID(u)
+	return cc
+}
+
+// SetNillableID sets the "id" field if the given value is not nil.
+func (cc *CharacterCreate) SetNillableID(u *uuid.UUID) *CharacterCreate {
+	if u != nil {
+		cc.SetID(*u)
+	}
 	return cc
 }
 
@@ -32,6 +299,7 @@ func (cc *CharacterCreate) Mutation() *CharacterMutation {
 
 // Save creates the Character in the database.
 func (cc *CharacterCreate) Save(ctx context.Context) (*Character, error) {
+	cc.defaults()
 	return withHooks[*Character, CharacterMutation](ctx, cc.sqlSave, cc.mutation, cc.hooks)
 }
 
@@ -57,10 +325,359 @@ func (cc *CharacterCreate) ExecX(ctx context.Context) {
 	}
 }
 
+// defaults sets the default values of the builder before save.
+func (cc *CharacterCreate) defaults() {
+	if _, ok := cc.mutation.ID(); !ok {
+		v := character.DefaultID()
+		cc.mutation.SetID(v)
+	}
+}
+
 // check runs all checks and user-defined validators on the builder.
 func (cc *CharacterCreate) check() error {
-	if _, ok := cc.mutation.Price(); !ok {
-		return &ValidationError{Name: "price", err: errors.New(`ent: missing required field "Character.price"`)}
+	if _, ok := cc.mutation.Name(); !ok {
+		return &ValidationError{Name: "name", err: errors.New(`ent: missing required field "Character.name"`)}
+	}
+	if v, ok := cc.mutation.Name(); ok {
+		if err := character.NameValidator(v); err != nil {
+			return &ValidationError{Name: "name", err: fmt.Errorf(`ent: validator failed for field "Character.name": %w`, err)}
+		}
+	}
+	if _, ok := cc.mutation.Combat(); !ok {
+		return &ValidationError{Name: "combat", err: errors.New(`ent: missing required field "Character.combat"`)}
+	}
+	if v, ok := cc.mutation.Combat(); ok {
+		if err := character.CombatValidator(v); err != nil {
+			return &ValidationError{Name: "combat", err: fmt.Errorf(`ent: validator failed for field "Character.combat": %w`, err)}
+		}
+	}
+	if _, ok := cc.mutation.Connaissance(); !ok {
+		return &ValidationError{Name: "connaissance", err: errors.New(`ent: missing required field "Character.connaissance"`)}
+	}
+	if v, ok := cc.mutation.Connaissance(); ok {
+		if err := character.ConnaissanceValidator(v); err != nil {
+			return &ValidationError{Name: "connaissance", err: fmt.Errorf(`ent: validator failed for field "Character.connaissance": %w`, err)}
+		}
+	}
+	if _, ok := cc.mutation.Discretion(); !ok {
+		return &ValidationError{Name: "discretion", err: errors.New(`ent: missing required field "Character.discretion"`)}
+	}
+	if v, ok := cc.mutation.Discretion(); ok {
+		if err := character.DiscretionValidator(v); err != nil {
+			return &ValidationError{Name: "discretion", err: fmt.Errorf(`ent: validator failed for field "Character.discretion": %w`, err)}
+		}
+	}
+	if _, ok := cc.mutation.Endurance(); !ok {
+		return &ValidationError{Name: "endurance", err: errors.New(`ent: missing required field "Character.endurance"`)}
+	}
+	if v, ok := cc.mutation.Endurance(); ok {
+		if err := character.EnduranceValidator(v); err != nil {
+			return &ValidationError{Name: "endurance", err: fmt.Errorf(`ent: validator failed for field "Character.endurance": %w`, err)}
+		}
+	}
+	if _, ok := cc.mutation.Force(); !ok {
+		return &ValidationError{Name: "force", err: errors.New(`ent: missing required field "Character.force"`)}
+	}
+	if v, ok := cc.mutation.Force(); ok {
+		if err := character.ForceValidator(v); err != nil {
+			return &ValidationError{Name: "force", err: fmt.Errorf(`ent: validator failed for field "Character.force": %w`, err)}
+		}
+	}
+	if _, ok := cc.mutation.Habilite(); !ok {
+		return &ValidationError{Name: "habilite", err: errors.New(`ent: missing required field "Character.habilite"`)}
+	}
+	if v, ok := cc.mutation.Habilite(); ok {
+		if err := character.HabiliteValidator(v); err != nil {
+			return &ValidationError{Name: "habilite", err: fmt.Errorf(`ent: validator failed for field "Character.habilite": %w`, err)}
+		}
+	}
+	if _, ok := cc.mutation.Mouvement(); !ok {
+		return &ValidationError{Name: "mouvement", err: errors.New(`ent: missing required field "Character.mouvement"`)}
+	}
+	if v, ok := cc.mutation.Mouvement(); ok {
+		if err := character.MouvementValidator(v); err != nil {
+			return &ValidationError{Name: "mouvement", err: fmt.Errorf(`ent: validator failed for field "Character.mouvement": %w`, err)}
+		}
+	}
+	if _, ok := cc.mutation.Perception(); !ok {
+		return &ValidationError{Name: "perception", err: errors.New(`ent: missing required field "Character.perception"`)}
+	}
+	if v, ok := cc.mutation.Perception(); ok {
+		if err := character.PerceptionValidator(v); err != nil {
+			return &ValidationError{Name: "perception", err: fmt.Errorf(`ent: validator failed for field "Character.perception": %w`, err)}
+		}
+	}
+	if _, ok := cc.mutation.Sociabilite(); !ok {
+		return &ValidationError{Name: "sociabilite", err: errors.New(`ent: missing required field "Character.sociabilite"`)}
+	}
+	if v, ok := cc.mutation.Sociabilite(); ok {
+		if err := character.SociabiliteValidator(v); err != nil {
+			return &ValidationError{Name: "sociabilite", err: fmt.Errorf(`ent: validator failed for field "Character.sociabilite": %w`, err)}
+		}
+	}
+	if _, ok := cc.mutation.Survie(); !ok {
+		return &ValidationError{Name: "survie", err: errors.New(`ent: missing required field "Character.survie"`)}
+	}
+	if v, ok := cc.mutation.Survie(); ok {
+		if err := character.SurvieValidator(v); err != nil {
+			return &ValidationError{Name: "survie", err: fmt.Errorf(`ent: validator failed for field "Character.survie": %w`, err)}
+		}
+	}
+	if _, ok := cc.mutation.Tir(); !ok {
+		return &ValidationError{Name: "tir", err: errors.New(`ent: missing required field "Character.tir"`)}
+	}
+	if v, ok := cc.mutation.Tir(); ok {
+		if err := character.TirValidator(v); err != nil {
+			return &ValidationError{Name: "tir", err: fmt.Errorf(`ent: validator failed for field "Character.tir": %w`, err)}
+		}
+	}
+	if _, ok := cc.mutation.Volonte(); !ok {
+		return &ValidationError{Name: "volonte", err: errors.New(`ent: missing required field "Character.volonte"`)}
+	}
+	if v, ok := cc.mutation.Volonte(); ok {
+		if err := character.VolonteValidator(v); err != nil {
+			return &ValidationError{Name: "volonte", err: fmt.Errorf(`ent: validator failed for field "Character.volonte": %w`, err)}
+		}
+	}
+	if _, ok := cc.mutation.Exp(); !ok {
+		return &ValidationError{Name: "exp", err: errors.New(`ent: missing required field "Character.exp"`)}
+	}
+	if v, ok := cc.mutation.Exp(); ok {
+		if err := character.ExpValidator(v); err != nil {
+			return &ValidationError{Name: "exp", err: fmt.Errorf(`ent: validator failed for field "Character.exp": %w`, err)}
+		}
+	}
+	if _, ok := cc.mutation.ArmesHast(); !ok {
+		return &ValidationError{Name: "armes_hast", err: errors.New(`ent: missing required field "Character.armes_hast"`)}
+	}
+	if v, ok := cc.mutation.ArmesHast(); ok {
+		if err := character.ArmesHastValidator(v); err != nil {
+			return &ValidationError{Name: "armes_hast", err: fmt.Errorf(`ent: validator failed for field "Character.armes_hast": %w`, err)}
+		}
+	}
+	if _, ok := cc.mutation.ArmesMoine(); !ok {
+		return &ValidationError{Name: "armes_moine", err: errors.New(`ent: missing required field "Character.armes_moine"`)}
+	}
+	if v, ok := cc.mutation.ArmesMoine(); ok {
+		if err := character.ArmesMoineValidator(v); err != nil {
+			return &ValidationError{Name: "armes_moine", err: fmt.Errorf(`ent: validator failed for field "Character.armes_moine": %w`, err)}
+		}
+	}
+	if _, ok := cc.mutation.ArmesDoubles(); !ok {
+		return &ValidationError{Name: "armes_doubles", err: errors.New(`ent: missing required field "Character.armes_doubles"`)}
+	}
+	if v, ok := cc.mutation.ArmesDoubles(); ok {
+		if err := character.ArmesDoublesValidator(v); err != nil {
+			return &ValidationError{Name: "armes_doubles", err: fmt.Errorf(`ent: validator failed for field "Character.armes_doubles": %w`, err)}
+		}
+	}
+	if _, ok := cc.mutation.ArmesNaturelles(); !ok {
+		return &ValidationError{Name: "armes_naturelles", err: errors.New(`ent: missing required field "Character.armes_naturelles"`)}
+	}
+	if v, ok := cc.mutation.ArmesNaturelles(); ok {
+		if err := character.ArmesNaturellesValidator(v); err != nil {
+			return &ValidationError{Name: "armes_naturelles", err: fmt.Errorf(`ent: validator failed for field "Character.armes_naturelles": %w`, err)}
+		}
+	}
+	if _, ok := cc.mutation.Batons(); !ok {
+		return &ValidationError{Name: "batons", err: errors.New(`ent: missing required field "Character.batons"`)}
+	}
+	if v, ok := cc.mutation.Batons(); ok {
+		if err := character.BatonsValidator(v); err != nil {
+			return &ValidationError{Name: "batons", err: fmt.Errorf(`ent: validator failed for field "Character.batons": %w`, err)}
+		}
+	}
+	if _, ok := cc.mutation.Cimeterres(); !ok {
+		return &ValidationError{Name: "cimeterres", err: errors.New(`ent: missing required field "Character.cimeterres"`)}
+	}
+	if v, ok := cc.mutation.Cimeterres(); ok {
+		if err := character.CimeterresValidator(v); err != nil {
+			return &ValidationError{Name: "cimeterres", err: fmt.Errorf(`ent: validator failed for field "Character.cimeterres": %w`, err)}
+		}
+	}
+	if _, ok := cc.mutation.Fleaux(); !ok {
+		return &ValidationError{Name: "fleaux", err: errors.New(`ent: missing required field "Character.fleaux"`)}
+	}
+	if v, ok := cc.mutation.Fleaux(); ok {
+		if err := character.FleauxValidator(v); err != nil {
+			return &ValidationError{Name: "fleaux", err: fmt.Errorf(`ent: validator failed for field "Character.fleaux": %w`, err)}
+		}
+	}
+	if _, ok := cc.mutation.Fouets(); !ok {
+		return &ValidationError{Name: "fouets", err: errors.New(`ent: missing required field "Character.fouets"`)}
+	}
+	if v, ok := cc.mutation.Fouets(); ok {
+		if err := character.FouetsValidator(v); err != nil {
+			return &ValidationError{Name: "fouets", err: fmt.Errorf(`ent: validator failed for field "Character.fouets": %w`, err)}
+		}
+	}
+	if _, ok := cc.mutation.Haches(); !ok {
+		return &ValidationError{Name: "haches", err: errors.New(`ent: missing required field "Character.haches"`)}
+	}
+	if v, ok := cc.mutation.Haches(); ok {
+		if err := character.HachesValidator(v); err != nil {
+			return &ValidationError{Name: "haches", err: fmt.Errorf(`ent: validator failed for field "Character.haches": %w`, err)}
+		}
+	}
+	if _, ok := cc.mutation.Katanas(); !ok {
+		return &ValidationError{Name: "katanas", err: errors.New(`ent: missing required field "Character.katanas"`)}
+	}
+	if v, ok := cc.mutation.Katanas(); ok {
+		if err := character.KatanasValidator(v); err != nil {
+			return &ValidationError{Name: "katanas", err: fmt.Errorf(`ent: validator failed for field "Character.katanas": %w`, err)}
+		}
+	}
+	if _, ok := cc.mutation.LamesLegeres(); !ok {
+		return &ValidationError{Name: "lames_legeres", err: errors.New(`ent: missing required field "Character.lames_legeres"`)}
+	}
+	if v, ok := cc.mutation.LamesLegeres(); ok {
+		if err := character.LamesLegeresValidator(v); err != nil {
+			return &ValidationError{Name: "lames_legeres", err: fmt.Errorf(`ent: validator failed for field "Character.lames_legeres": %w`, err)}
+		}
+	}
+	if _, ok := cc.mutation.LamesLourdes(); !ok {
+		return &ValidationError{Name: "lames_lourdes", err: errors.New(`ent: missing required field "Character.lames_lourdes"`)}
+	}
+	if v, ok := cc.mutation.LamesLourdes(); ok {
+		if err := character.LamesLourdesValidator(v); err != nil {
+			return &ValidationError{Name: "lames_lourdes", err: fmt.Errorf(`ent: validator failed for field "Character.lames_lourdes": %w`, err)}
+		}
+	}
+	if _, ok := cc.mutation.Lances(); !ok {
+		return &ValidationError{Name: "lances", err: errors.New(`ent: missing required field "Character.lances"`)}
+	}
+	if v, ok := cc.mutation.Lances(); ok {
+		if err := character.LancesValidator(v); err != nil {
+			return &ValidationError{Name: "lances", err: fmt.Errorf(`ent: validator failed for field "Character.lances": %w`, err)}
+		}
+	}
+	if _, ok := cc.mutation.Marteaux(); !ok {
+		return &ValidationError{Name: "marteaux", err: errors.New(`ent: missing required field "Character.marteaux"`)}
+	}
+	if v, ok := cc.mutation.Marteaux(); ok {
+		if err := character.MarteauxValidator(v); err != nil {
+			return &ValidationError{Name: "marteaux", err: fmt.Errorf(`ent: validator failed for field "Character.marteaux": %w`, err)}
+		}
+	}
+	if _, ok := cc.mutation.MainsNues(); !ok {
+		return &ValidationError{Name: "mains_nues", err: errors.New(`ent: missing required field "Character.mains_nues"`)}
+	}
+	if v, ok := cc.mutation.MainsNues(); ok {
+		if err := character.MainsNuesValidator(v); err != nil {
+			return &ValidationError{Name: "mains_nues", err: fmt.Errorf(`ent: validator failed for field "Character.mains_nues": %w`, err)}
+		}
+	}
+	if _, ok := cc.mutation.Mysteres(); !ok {
+		return &ValidationError{Name: "mysteres", err: errors.New(`ent: missing required field "Character.mysteres"`)}
+	}
+	if v, ok := cc.mutation.Mysteres(); ok {
+		if err := character.MysteresValidator(v); err != nil {
+			return &ValidationError{Name: "mysteres", err: fmt.Errorf(`ent: validator failed for field "Character.mysteres": %w`, err)}
+		}
+	}
+	if _, ok := cc.mutation.ExplorationSouterraine(); !ok {
+		return &ValidationError{Name: "exploration_souterraine", err: errors.New(`ent: missing required field "Character.exploration_souterraine"`)}
+	}
+	if v, ok := cc.mutation.ExplorationSouterraine(); ok {
+		if err := character.ExplorationSouterraineValidator(v); err != nil {
+			return &ValidationError{Name: "exploration_souterraine", err: fmt.Errorf(`ent: validator failed for field "Character.exploration_souterraine": %w`, err)}
+		}
+	}
+	if _, ok := cc.mutation.Ingenierie(); !ok {
+		return &ValidationError{Name: "ingenierie", err: errors.New(`ent: missing required field "Character.ingenierie"`)}
+	}
+	if v, ok := cc.mutation.Ingenierie(); ok {
+		if err := character.IngenierieValidator(v); err != nil {
+			return &ValidationError{Name: "ingenierie", err: fmt.Errorf(`ent: validator failed for field "Character.ingenierie": %w`, err)}
+		}
+	}
+	if _, ok := cc.mutation.Geographie(); !ok {
+		return &ValidationError{Name: "geographie", err: errors.New(`ent: missing required field "Character.geographie"`)}
+	}
+	if v, ok := cc.mutation.Geographie(); ok {
+		if err := character.GeographieValidator(v); err != nil {
+			return &ValidationError{Name: "geographie", err: fmt.Errorf(`ent: validator failed for field "Character.geographie": %w`, err)}
+		}
+	}
+	if _, ok := cc.mutation.Histoire(); !ok {
+		return &ValidationError{Name: "histoire", err: errors.New(`ent: missing required field "Character.histoire"`)}
+	}
+	if v, ok := cc.mutation.Histoire(); ok {
+		if err := character.HistoireValidator(v); err != nil {
+			return &ValidationError{Name: "histoire", err: fmt.Errorf(`ent: validator failed for field "Character.histoire": %w`, err)}
+		}
+	}
+	if _, ok := cc.mutation.Folklore(); !ok {
+		return &ValidationError{Name: "folklore", err: errors.New(`ent: missing required field "Character.folklore"`)}
+	}
+	if v, ok := cc.mutation.Folklore(); ok {
+		if err := character.FolkloreValidator(v); err != nil {
+			return &ValidationError{Name: "folklore", err: fmt.Errorf(`ent: validator failed for field "Character.folklore": %w`, err)}
+		}
+	}
+	if _, ok := cc.mutation.Nature(); !ok {
+		return &ValidationError{Name: "nature", err: errors.New(`ent: missing required field "Character.nature"`)}
+	}
+	if v, ok := cc.mutation.Nature(); ok {
+		if err := character.NatureValidator(v); err != nil {
+			return &ValidationError{Name: "nature", err: fmt.Errorf(`ent: validator failed for field "Character.nature": %w`, err)}
+		}
+	}
+	if _, ok := cc.mutation.Noblesse(); !ok {
+		return &ValidationError{Name: "noblesse", err: errors.New(`ent: missing required field "Character.noblesse"`)}
+	}
+	if v, ok := cc.mutation.Noblesse(); ok {
+		if err := character.NoblesseValidator(v); err != nil {
+			return &ValidationError{Name: "noblesse", err: fmt.Errorf(`ent: validator failed for field "Character.noblesse": %w`, err)}
+		}
+	}
+	if _, ok := cc.mutation.Plans(); !ok {
+		return &ValidationError{Name: "plans", err: errors.New(`ent: missing required field "Character.plans"`)}
+	}
+	if v, ok := cc.mutation.Plans(); ok {
+		if err := character.PlansValidator(v); err != nil {
+			return &ValidationError{Name: "plans", err: fmt.Errorf(`ent: validator failed for field "Character.plans": %w`, err)}
+		}
+	}
+	if _, ok := cc.mutation.Religon(); !ok {
+		return &ValidationError{Name: "religon", err: errors.New(`ent: missing required field "Character.religon"`)}
+	}
+	if v, ok := cc.mutation.Religon(); ok {
+		if err := character.ReligonValidator(v); err != nil {
+			return &ValidationError{Name: "religon", err: fmt.Errorf(`ent: validator failed for field "Character.religon": %w`, err)}
+		}
+	}
+	if _, ok := cc.mutation.Anatomie(); !ok {
+		return &ValidationError{Name: "anatomie", err: errors.New(`ent: missing required field "Character.anatomie"`)}
+	}
+	if v, ok := cc.mutation.Anatomie(); ok {
+		if err := character.AnatomieValidator(v); err != nil {
+			return &ValidationError{Name: "anatomie", err: fmt.Errorf(`ent: validator failed for field "Character.anatomie": %w`, err)}
+		}
+	}
+	if _, ok := cc.mutation.MagieTheorique(); !ok {
+		return &ValidationError{Name: "magie_theorique", err: errors.New(`ent: missing required field "Character.magie_theorique"`)}
+	}
+	if v, ok := cc.mutation.MagieTheorique(); ok {
+		if err := character.MagieTheoriqueValidator(v); err != nil {
+			return &ValidationError{Name: "magie_theorique", err: fmt.Errorf(`ent: validator failed for field "Character.magie_theorique": %w`, err)}
+		}
+	}
+	if _, ok := cc.mutation.Economie(); !ok {
+		return &ValidationError{Name: "economie", err: errors.New(`ent: missing required field "Character.economie"`)}
+	}
+	if v, ok := cc.mutation.Economie(); ok {
+		if err := character.EconomieValidator(v); err != nil {
+			return &ValidationError{Name: "economie", err: fmt.Errorf(`ent: validator failed for field "Character.economie": %w`, err)}
+		}
+	}
+	if _, ok := cc.mutation.Linguistique(); !ok {
+		return &ValidationError{Name: "linguistique", err: errors.New(`ent: missing required field "Character.linguistique"`)}
+	}
+	if v, ok := cc.mutation.Linguistique(); ok {
+		if err := character.LinguistiqueValidator(v); err != nil {
+			return &ValidationError{Name: "linguistique", err: fmt.Errorf(`ent: validator failed for field "Character.linguistique": %w`, err)}
+		}
 	}
 	return nil
 }
@@ -76,8 +693,13 @@ func (cc *CharacterCreate) sqlSave(ctx context.Context) (*Character, error) {
 		}
 		return nil, err
 	}
-	id := _spec.ID.Value.(int64)
-	_node.ID = int(id)
+	if _spec.ID.Value != nil {
+		if id, ok := _spec.ID.Value.(*uuid.UUID); ok {
+			_node.ID = *id
+		} else if err := _node.ID.Scan(_spec.ID.Value); err != nil {
+			return nil, err
+		}
+	}
 	cc.mutation.id = &_node.ID
 	cc.mutation.done = true
 	return _node, nil
@@ -89,14 +711,186 @@ func (cc *CharacterCreate) createSpec() (*Character, *sqlgraph.CreateSpec) {
 		_spec = &sqlgraph.CreateSpec{
 			Table: character.Table,
 			ID: &sqlgraph.FieldSpec{
-				Type:   field.TypeInt,
+				Type:   field.TypeUUID,
 				Column: character.FieldID,
 			},
 		}
 	)
-	if value, ok := cc.mutation.Price(); ok {
-		_spec.SetField(character.FieldPrice, field.TypeInt64, value)
-		_node.Price = value
+	if id, ok := cc.mutation.ID(); ok {
+		_node.ID = id
+		_spec.ID.Value = &id
+	}
+	if value, ok := cc.mutation.Name(); ok {
+		_spec.SetField(character.FieldName, field.TypeString, value)
+		_node.Name = value
+	}
+	if value, ok := cc.mutation.Combat(); ok {
+		_spec.SetField(character.FieldCombat, field.TypeInt, value)
+		_node.Combat = value
+	}
+	if value, ok := cc.mutation.Connaissance(); ok {
+		_spec.SetField(character.FieldConnaissance, field.TypeInt, value)
+		_node.Connaissance = value
+	}
+	if value, ok := cc.mutation.Discretion(); ok {
+		_spec.SetField(character.FieldDiscretion, field.TypeInt, value)
+		_node.Discretion = value
+	}
+	if value, ok := cc.mutation.Endurance(); ok {
+		_spec.SetField(character.FieldEndurance, field.TypeInt, value)
+		_node.Endurance = value
+	}
+	if value, ok := cc.mutation.Force(); ok {
+		_spec.SetField(character.FieldForce, field.TypeInt, value)
+		_node.Force = value
+	}
+	if value, ok := cc.mutation.Habilite(); ok {
+		_spec.SetField(character.FieldHabilite, field.TypeInt, value)
+		_node.Habilite = value
+	}
+	if value, ok := cc.mutation.Mouvement(); ok {
+		_spec.SetField(character.FieldMouvement, field.TypeInt, value)
+		_node.Mouvement = value
+	}
+	if value, ok := cc.mutation.Perception(); ok {
+		_spec.SetField(character.FieldPerception, field.TypeInt, value)
+		_node.Perception = value
+	}
+	if value, ok := cc.mutation.Sociabilite(); ok {
+		_spec.SetField(character.FieldSociabilite, field.TypeInt, value)
+		_node.Sociabilite = value
+	}
+	if value, ok := cc.mutation.Survie(); ok {
+		_spec.SetField(character.FieldSurvie, field.TypeInt, value)
+		_node.Survie = value
+	}
+	if value, ok := cc.mutation.Tir(); ok {
+		_spec.SetField(character.FieldTir, field.TypeInt, value)
+		_node.Tir = value
+	}
+	if value, ok := cc.mutation.Volonte(); ok {
+		_spec.SetField(character.FieldVolonte, field.TypeInt, value)
+		_node.Volonte = value
+	}
+	if value, ok := cc.mutation.Exp(); ok {
+		_spec.SetField(character.FieldExp, field.TypeInt, value)
+		_node.Exp = value
+	}
+	if value, ok := cc.mutation.ArmesHast(); ok {
+		_spec.SetField(character.FieldArmesHast, field.TypeInt, value)
+		_node.ArmesHast = value
+	}
+	if value, ok := cc.mutation.ArmesMoine(); ok {
+		_spec.SetField(character.FieldArmesMoine, field.TypeInt, value)
+		_node.ArmesMoine = value
+	}
+	if value, ok := cc.mutation.ArmesDoubles(); ok {
+		_spec.SetField(character.FieldArmesDoubles, field.TypeInt, value)
+		_node.ArmesDoubles = value
+	}
+	if value, ok := cc.mutation.ArmesNaturelles(); ok {
+		_spec.SetField(character.FieldArmesNaturelles, field.TypeInt, value)
+		_node.ArmesNaturelles = value
+	}
+	if value, ok := cc.mutation.Batons(); ok {
+		_spec.SetField(character.FieldBatons, field.TypeInt, value)
+		_node.Batons = value
+	}
+	if value, ok := cc.mutation.Cimeterres(); ok {
+		_spec.SetField(character.FieldCimeterres, field.TypeInt, value)
+		_node.Cimeterres = value
+	}
+	if value, ok := cc.mutation.Fleaux(); ok {
+		_spec.SetField(character.FieldFleaux, field.TypeInt, value)
+		_node.Fleaux = value
+	}
+	if value, ok := cc.mutation.Fouets(); ok {
+		_spec.SetField(character.FieldFouets, field.TypeInt, value)
+		_node.Fouets = value
+	}
+	if value, ok := cc.mutation.Haches(); ok {
+		_spec.SetField(character.FieldHaches, field.TypeInt, value)
+		_node.Haches = value
+	}
+	if value, ok := cc.mutation.Katanas(); ok {
+		_spec.SetField(character.FieldKatanas, field.TypeInt, value)
+		_node.Katanas = value
+	}
+	if value, ok := cc.mutation.LamesLegeres(); ok {
+		_spec.SetField(character.FieldLamesLegeres, field.TypeInt, value)
+		_node.LamesLegeres = value
+	}
+	if value, ok := cc.mutation.LamesLourdes(); ok {
+		_spec.SetField(character.FieldLamesLourdes, field.TypeInt, value)
+		_node.LamesLourdes = value
+	}
+	if value, ok := cc.mutation.Lances(); ok {
+		_spec.SetField(character.FieldLances, field.TypeInt, value)
+		_node.Lances = value
+	}
+	if value, ok := cc.mutation.Marteaux(); ok {
+		_spec.SetField(character.FieldMarteaux, field.TypeInt, value)
+		_node.Marteaux = value
+	}
+	if value, ok := cc.mutation.MainsNues(); ok {
+		_spec.SetField(character.FieldMainsNues, field.TypeInt, value)
+		_node.MainsNues = value
+	}
+	if value, ok := cc.mutation.Mysteres(); ok {
+		_spec.SetField(character.FieldMysteres, field.TypeInt, value)
+		_node.Mysteres = value
+	}
+	if value, ok := cc.mutation.ExplorationSouterraine(); ok {
+		_spec.SetField(character.FieldExplorationSouterraine, field.TypeInt, value)
+		_node.ExplorationSouterraine = value
+	}
+	if value, ok := cc.mutation.Ingenierie(); ok {
+		_spec.SetField(character.FieldIngenierie, field.TypeInt, value)
+		_node.Ingenierie = value
+	}
+	if value, ok := cc.mutation.Geographie(); ok {
+		_spec.SetField(character.FieldGeographie, field.TypeInt, value)
+		_node.Geographie = value
+	}
+	if value, ok := cc.mutation.Histoire(); ok {
+		_spec.SetField(character.FieldHistoire, field.TypeInt, value)
+		_node.Histoire = value
+	}
+	if value, ok := cc.mutation.Folklore(); ok {
+		_spec.SetField(character.FieldFolklore, field.TypeInt, value)
+		_node.Folklore = value
+	}
+	if value, ok := cc.mutation.Nature(); ok {
+		_spec.SetField(character.FieldNature, field.TypeInt, value)
+		_node.Nature = value
+	}
+	if value, ok := cc.mutation.Noblesse(); ok {
+		_spec.SetField(character.FieldNoblesse, field.TypeInt, value)
+		_node.Noblesse = value
+	}
+	if value, ok := cc.mutation.Plans(); ok {
+		_spec.SetField(character.FieldPlans, field.TypeInt, value)
+		_node.Plans = value
+	}
+	if value, ok := cc.mutation.Religon(); ok {
+		_spec.SetField(character.FieldReligon, field.TypeInt, value)
+		_node.Religon = value
+	}
+	if value, ok := cc.mutation.Anatomie(); ok {
+		_spec.SetField(character.FieldAnatomie, field.TypeInt, value)
+		_node.Anatomie = value
+	}
+	if value, ok := cc.mutation.MagieTheorique(); ok {
+		_spec.SetField(character.FieldMagieTheorique, field.TypeInt, value)
+		_node.MagieTheorique = value
+	}
+	if value, ok := cc.mutation.Economie(); ok {
+		_spec.SetField(character.FieldEconomie, field.TypeInt, value)
+		_node.Economie = value
+	}
+	if value, ok := cc.mutation.Linguistique(); ok {
+		_spec.SetField(character.FieldLinguistique, field.TypeInt, value)
+		_node.Linguistique = value
 	}
 	return _node, _spec
 }
@@ -115,6 +909,7 @@ func (ccb *CharacterCreateBulk) Save(ctx context.Context) ([]*Character, error) 
 	for i := range ccb.builders {
 		func(i int, root context.Context) {
 			builder := ccb.builders[i]
+			builder.defaults()
 			var mut Mutator = MutateFunc(func(ctx context.Context, m Mutation) (Value, error) {
 				mutation, ok := m.(*CharacterMutation)
 				if !ok {
@@ -141,10 +936,6 @@ func (ccb *CharacterCreateBulk) Save(ctx context.Context) ([]*Character, error) 
 					return nil, err
 				}
 				mutation.id = &nodes[i].ID
-				if specs[i].ID.Value != nil {
-					id := specs[i].ID.Value.(int64)
-					nodes[i].ID = int(id)
-				}
 				mutation.done = true
 				return nodes[i], nil
 			})
