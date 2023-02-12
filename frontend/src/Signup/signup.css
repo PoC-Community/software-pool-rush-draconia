@@ -33,6 +33,19 @@
     color: #8E736D;
 }
 
+.title_compte {
+    position:absolute;
+    top:5%;
+    left: 45%;
+    z-index:1;
+    font-size: 400%;
+    color: #8E736D;
+}
+
+.compte {
+    color: #F5DEB3;
+}
+
 .centere_texte {
     position: absolute;
     top: 40%;
@@ -75,4 +88,15 @@
     left: 45%;
     top:10%;
     padding-top: 20px;
+}
+
+.Persona {
+    top: 30%;
+    left: 15%;
+    width: 70%;
+    position:absolute;
+}
+
+.button {
+    left: 50%;
 }

@@ -31,7 +31,7 @@ export default function Sidebar(props: { children: string | number | boolean | R
 								</a>
 							</li>
 							<li className="rounded-sm">
-								<a href="/compte" className="flex items-center p-2 space-x-3 rounded-md">
+								<a href="/" className="flex items-center p-2 space-x-3 rounded-md">
 									<VscAccount size={22} color="black"/>
 									<span>Compte</span>
 								</a>
