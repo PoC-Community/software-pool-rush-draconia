@@ -17,7 +17,7 @@ export default function SignupUniseed({user} : {user: string}) {
 	return (
 		<div>
 			<div className="split" style={{ left: 0, backgroundColor: '#8b4513' }}>
-				<img className="rabbit" src="rabbit.jpg" alt="rabbit background" />
+				<img className="rabbit" src="dragon2.jpg" alt="rabbit background" />
 			</div>
 			<div className="split" style={{ right: 0, backgroundColor: '#e3b270' }}>
 				<img className="dragon" src="dragon.png" alt="dragon logo" />
