@@ -41,7 +41,7 @@ export default function Home() {
                     </div>
                 </SidebarHome>
             </div>
-            <img className='dragon_font' src="fond_ecran_rush.jpg" />
+            <img className='dragon_font' src="fond_ecran_rush.jpg" alt='dragon background'/>
         </div>
     );
 }

@@ -1,0 +1,217 @@
+[
+    {
+        "name": "test",
+        "genre": "homme",
+        "background": {
+            "origine": "urbain",
+            "classe_sociale": "Paysan",
+            "langues": [
+                "commun",
+                "elfe",
+                "nain"
+            ]
+        },
+        "pv": 12,
+        "pf": 4,
+        "pa": 2,
+        "mouvement": 9,
+        "encombrement": 3,
+        "initiative": 0,
+        "competences": {
+            "combat": {
+                "score": 1,
+                "Armes d’hast": 0,
+                "Armes de moine": 0,
+                "Armes doubles": 1,
+                "Armes naturelles": 1,
+                "Batons": 0,
+                "Cimeterres": 0,
+                "Fléaux": 0,
+                "Fouets": 0,
+                "Haches": 0,
+                "Katanas": 1,
+                "Lames_legeres": 1,
+                "Lames_lourdes": 1,
+                "Lances": 0,
+                "Marteaux": 0,
+                "Mains_nues": 1
+            },
+            "connaissance": {
+                "score": 2,
+                "Mysteres": 1,
+                "Exploration_souterraine": 0,
+                "Ingenierie": 1,
+                "Geographie": 0,
+                "Histoire": 1,
+                "Folklore_local": 0,
+                "Nature": 1,
+                "Noblesse": 1,
+                "Plans": 0,
+                "Religion": 1,
+                "Anatomie": 0,
+                "Magie_théorique": 1,
+                "Economie": 2,
+                "Linguistique": 2
+            },
+            "discretion": {
+                "score": 3,
+                "Filature": 3,
+                "Deplacement_silencieux": 0,
+                "Se_cacher": 0,
+                "Dissimulation_d’objets": 0
+            },
+            "endurance": {
+                "score": 4,
+                "Souffle": 0,
+                "Portefaix": 4,
+                "Resistance_poisons": 0,
+                "Resistance_maladies": 0,
+                "Resistance_alcool": 4,
+                "Resistance_froid": 0,
+                "Resistance_chaleur": 0,
+                "Resistance_faim": 0
+            },
+            "force": {
+                "score": 5,
+                "Canotage": 0,
+                "Intimidation": 0,
+                "Levage": 0,
+                "Resistance_coups": 0,
+                "Destruction": 5
+            },
+            "habilite": {
+                "score": 6,
+                "Assassinat": 5,
+                "Crochetage_sabotage": 1,
+                "Nœuds": 0,
+                "Artisanat": 0,
+                "Profession": 0,
+                "Premiers soins": 0,
+                "Escamotage_pickpocket": 0
+            },
+            "magie": {
+                "score": 0,
+                "abjuration": 0,
+                "divination": 0,
+                "enchantement": 0,
+                "evocation": 0,
+                "illusion": 0,
+                "invocation": 0,
+                "necromancie": 0,
+                "transmutation": 0
+            },
+            "mouvement": {
+                "score": 7,
+                "Course": 0,
+                "Contorsion_evasion": 0,
+                "Escalade": 0,
+                "Equitation": 0,
+                "Initiative_reflexes": 0,
+                "Natation": 0,
+                "Acrobatie_saut": 0,
+                "Envol_planage": 7
+            },
+            "perception": {
+                "score": 8,
+                "Vue_reperage": 0,
+                "Ecoute": 0,
+                "Odorat-gout": 0,
+                "Vigilance": 0,
+                "Fouille": 0,
+                "Orientation": 1
+            },
+            "sociabilite": {
+                "score": 9,
+                "Seduction": 0,
+                "Mensonges_baratin": 9,
+                "Negociation_marchandage": 0,
+                "Diplomatie": 0,
+                "Interrogatoire_torture": 9,
+                "Etiquette_politesse": 0,
+                "Discours_eloquence": 0,
+                "Conviction_demonstration": 0,
+                "Deguisements_imposture": 0,
+                "Dressage": 0,
+                "Psychologie_perception": 0,
+                "Representation_artistique": 0
+            },
+            "survie": {
+                "score": 10,
+                "Foret": 0,
+                "Desert": 0,
+                "Plaine_savane": 0,
+                "Marais": 0,
+                "Montagnes_collines": 0,
+                "Mer": 0,
+                "Jungle": 0,
+                "Outreterre": 0,
+                "Arctique": 0
+            },
+            "tir": {
+                "score": 11,
+                "Arcs": 0,
+                "Arbaletes": 0,
+                "Armes_jet": 0,
+                "Arme_jet_projectiles": 0,
+                "Engins_siege": 0,
+                "Armes à feu": 11
+            },
+            "volonte": {
+                "score": 12,
+                "Commandement": 0,
+                "Camaraderie": 0,
+                "Resistance_magie": 0,
+                "Resistance_peur": 0,
+                "Resistance_folie": 0
+            }
+        },
+        "race": "demi-elfe",
+        "alignement": "generosite",
+        "profil_depart": "druide",
+        "profils_base": [],
+        "profils_prestige_avances": [],
+        "manoeuvres": [
+            {
+                "nom": "fuite",
+                "effet": "Le personnage fait un test d’opposition de #Mouvement contre #Combat sans bonus, s’il remporte la passe d’armes, il n’inflige pas de dégâts, mais peut fuir la bataille sans subir d’attaque d’opportunité"
+            }
+        ],
+        "styles_martiaux": [],
+        "dons": [
+            {
+                "nom": "Science de l’initiative",
+                "effet": "Rajoute +4 points d’initiative"
+            }
+        ],
+        "sorts": [
+            {
+                "nom": "Détection du poison",
+                "ecole": "Divination",
+                "duree": "Instantanée",
+                "portee": "Courte",
+                "SG": "non",
+                "description": "Détecte le poison chez une créature ou un petit objet"
+            }
+        ],
+        "equipement": [
+            {
+                "nom": "dague",
+                "quantitee": 2,
+                "type": "arme",
+                "degats": "1d4",
+                "critique": "19-20",
+                "critique_mul": 2,
+                "allonge": 2,
+                "poids": 0.5,
+                "note": "Lançable si entrainement roturier"
+            }
+        ],
+        "attaques": 1,
+        "exp": 1000,
+        "pieces": {
+            "cuivre": 100,
+            "argent": 20,
+            "or": 4
+        }
+    }
+]

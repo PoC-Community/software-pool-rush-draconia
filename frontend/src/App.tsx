@@ -15,7 +15,7 @@ function App() {
         <Route path="/login" element={<Login user={user} setUser={setUser}/>} />
         <Route path="/" element={<Home />} />
         <Route path="/compte" element={<Compte user={user} setModifying={setModifying}/>} />
-		    <Route path="/create" element={<CharacterCreator charactername={modifying}/>} />
+		    <Route path="/create" element={<CharacterCreator characterName={modifying}/>} />
       </Routes>
   );
 }

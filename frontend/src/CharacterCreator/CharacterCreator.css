@@ -15,3 +15,35 @@
 .titre {
     font-family: 'Cinzel', cursive;
 }
+
+.columnLeft {
+    flex: 50%;
+    text-align: right;
+}
+
+.columnRight {
+    flex: 50%;
+    text-align: left;
+}
+
+.selector {
+    appearance: none;
+    background-color: transparent;
+    border: none;
+    padding: 0 1em 0 0;
+    margin: 0;
+    margin-top: 2px;
+    width: 100%;
+    font-family: inherit;
+    font-size: inherit;
+    cursor: inherit;
+    line-height: inherit;
+    width: 100%;
+    min-width: 15ch;
+    max-width: 30ch;
+    border: 1px solid var(--select-border);
+    font-size: 1.25rem;
+    cursor: pointer;
+    line-height: 1.1;
+    background-color: #fff;
+}
