@@ -2,7 +2,7 @@ import './CharacterCreator.css';
 // eslint-disable-next-line
 import Sidebar from './Sidebar';
 
-export default function CharacterCreator() {
+export default function CharacterCreator({charactername}: {charactername: string}) {
 	return (
 		<div className="background-main">
 			<Sidebar>
